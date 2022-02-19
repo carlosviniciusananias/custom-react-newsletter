@@ -15,7 +15,10 @@ import {
 
 const Newsletter = ({ title, error, sucess }) => {
   const [state, setState] = useState(false);
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+  });
 
   const handleChange = (event) => {
     setInputs((values) => ({
@@ -27,8 +30,8 @@ const Newsletter = ({ title, error, sucess }) => {
   const handleSubmit = ({ BASE_URL }) => {
     axios
       .post(`${BASE_URL}`, {
-        name: data.name,
-        email: data.email,
+        name: inputs.name,
+        email: inputs.email,
       })
       .then(function () {
         setState(true);
@@ -48,7 +51,7 @@ const Newsletter = ({ title, error, sucess }) => {
             type="text"
             name="name"
             placeholder="insert your name"
-            value={inputs.name || ""}
+            value={inputs.name}
             onChange={handleChange}
           />
         </div>
@@ -59,7 +62,7 @@ const Newsletter = ({ title, error, sucess }) => {
             type="email"
             name="email"
             placeholder="insert your e-mail"
-            value={inputs.email || ""}
+            value={inputs.email}
             onChange={handleChange}
           />
         </div>
