@@ -4,7 +4,7 @@ import Newsletter from "../src";
 
 const App = () => (
   <Newsletter
-    entity={"/api/dataentities/NL/documents"}
+    BASE_URL={"/api/dataentities/NL/documents"}
     title={"Newsletter"}
     error={"Failed to send data! :("}
     sucess={"Successful sending data"}

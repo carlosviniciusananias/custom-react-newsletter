@@ -40,11 +40,12 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Newsletter = function Newsletter(_ref) {
-  var title = _ref.title,
-      error = _ref.error,
-      sucess = _ref.sucess;
+  var BASE_URL = _ref.BASE_URL,
+      title = _ref.title,
+      sucess = _ref.sucess,
+      error = _ref.error;
 
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)(),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
       setState = _useState2[1];
@@ -57,14 +58,13 @@ var Newsletter = function Newsletter(_ref) {
       inputs = _useState4[0],
       setInputs = _useState4[1];
 
-  var handleChange = function handleChange(event) {
-    setInputs(function (values) {
-      return _objectSpread(_objectSpread({}, values), {}, _defineProperty({}, event.target.name, event.target.value));
-    });
+  var handleChange = function handleChange(evt) {
+    var value = evt.target.value;
+    setInputs(_objectSpread(_objectSpread({}, inputs), {}, _defineProperty({}, evt.target.name, value)));
   };
 
-  var handleSubmit = function handleSubmit(_ref2) {
-    var BASE_URL = _ref2.BASE_URL;
+  var handleSubmit = function handleSubmit(evt) {
+    evt.preventDefault();
 
     _axios["default"].post("".concat(BASE_URL), {
       name: inputs.name,
@@ -95,14 +95,14 @@ var Newsletter = function Newsletter(_ref) {
   })), /*#__PURE__*/_react["default"].createElement(_style.Button, {
     type: "submit",
     onClick: handleSubmit
-  }, "send")), state ? /*#__PURE__*/_react["default"].createElement(_style.Sucess, null, sucess) : /*#__PURE__*/_react["default"].createElement(_style.Error, null, error));
+  }, "send")), state && /*#__PURE__*/_react["default"].createElement(_style.Sucess, null, sucess));
 };
 
 Newsletter.propTypes = {
   BASE_URL: _propTypes["default"].string,
   title: _propTypes["default"].string,
-  error: _propTypes["default"].string,
-  sucess: _propTypes["default"].string
+  sucess: _propTypes["default"].string,
+  error: _propTypes["default"].string
 };
 var _default = Newsletter;
 exports["default"] = _default;

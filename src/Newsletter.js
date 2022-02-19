@@ -2,32 +2,27 @@ import React, { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-import {
-  Container,
-  Title,
-  Form,
-  Label,
-  Input,
-  Button,
-  Sucess,
-  Error,
-} from "./style";
+import { Container, Title, Form, Label, Input, Button, Sucess } from "./style";
 
-const Newsletter = ({ title, error, sucess }) => {
-  const [state, setState] = useState(false);
+const Newsletter = ({ BASE_URL, title, sucess, error }) => {
+  const [state, setState] = useState();
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
   });
 
-  const handleChange = (event) => {
-    setInputs((values) => ({
-      ...values,
-      [event.target.name]: event.target.value,
-    }));
+  const handleChange = (evt) => {
+    const value = evt.target.value;
+
+    setInputs({
+      ...inputs,
+      [evt.target.name]: value,
+    });
   };
 
-  const handleSubmit = ({ BASE_URL }) => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
     axios
       .post(`${BASE_URL}`, {
         name: inputs.name,
@@ -72,7 +67,7 @@ const Newsletter = ({ title, error, sucess }) => {
         </Button>
       </Form>
 
-      {state ? <Sucess>{sucess}</Sucess> : <Error>{error}</Error>}
+      {state && <Sucess>{sucess}</Sucess>}
     </Container>
   );
 };
@@ -80,8 +75,8 @@ const Newsletter = ({ title, error, sucess }) => {
 Newsletter.propTypes = {
   BASE_URL: PropTypes.string,
   title: PropTypes.string,
-  error: PropTypes.string,
   sucess: PropTypes.string,
+  error: PropTypes.string,
 };
 
 export default Newsletter;
