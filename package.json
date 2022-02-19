@@ -1,9 +1,9 @@
 {
-  "name": "vtex-newsletter",
-  "version": "1.0.6",
-  "description": "this is a newsletter component developed agnostically",
+  "name": "react-newsletter",
+  "version": "1.0.0",
+  "description": "This is a newsletter component developed agnostically",
   "main": "index.js",
-  "repository": "https://github.com/carlosviniciusananias/vtex-newsletter",
+  "repository": "https://github.com/carlosviniciusananias/react-newsletter",
   "author": "Carlos VInicius Ananias <carlos.oliveira69@fatec.sp.gov.br>",
   "license": "MIT",
   "scripts": {
