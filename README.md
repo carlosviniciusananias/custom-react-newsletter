@@ -1,4 +1,4 @@
-📢 Use este projeto, [contribua](https://github.com/carlosviniciusananias/react-newsletter) com ele ou abra problemas para ajudar a evoluí-lo.
+📢 Use este projeto, [contribua](https://github.com/carlosviniciusananias/custom-react-newsletter) com ele ou abra problemas para ajudar a evoluí-lo.
 
 # Newsletter
 
@@ -10,20 +10,20 @@
 
 O aplicativo submete dados para sua base de dados, permitindo que os usuários da loja se cadastrem para receber futuras promoções/ofertas.
 
-![react-newsletter](https://user-images.githubusercontent.com/32168339/154802287-33fcbe0c-0789-4262-a85b-39adfc565f45.png)
+![custom-react-newsletter](https://user-images.githubusercontent.com/32168339/154802287-33fcbe0c-0789-4262-a85b-39adfc565f45.png)
 
 ## Configurações
 
-### Etapa 1 - Adicione react-newsletter às dependências do seu projeto
+### Etapa 1 - Adicione custom-react-newsletter às dependências do seu projeto
 
-```npm install react-newsletter``` or
-```yarn add react-newsletter```
+```npm install custom-custom-react-newsletter``` or
+```yarn add custom-custom-react-newsletter```
 
 ### Etapa 2 - Importando o aplicativo e utilizando-o em seu projeto
 
 ```javascript
 import React from 'react'
-import Newsletter from 'react-newsletter/dist'
+import Newsletter from 'custom-react-newsletter/dist'
 
 const Example = () => {
   return (
@@ -36,7 +36,7 @@ export default Example
 
 ## Dicas
 
-#### `react-newsletter` props
+#### `custom-react-newsletter` props
 
 | Nome      | Tipo          | Descrição                    | Valor inicial |
 | :------------: | :-----------: | :----------------------------: | :-----------: |
