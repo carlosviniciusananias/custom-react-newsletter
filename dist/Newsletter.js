@@ -49,7 +49,10 @@ var Newsletter = function Newsletter(_ref) {
       state = _useState2[0],
       setState = _useState2[1];
 
-  var _useState3 = (0, _react.useState)({}),
+  var _useState3 = (0, _react.useState)({
+    name: "",
+    email: ""
+  }),
       _useState4 = _slicedToArray(_useState3, 2),
       inputs = _useState4[0],
       setInputs = _useState4[1];
@@ -64,8 +67,8 @@ var Newsletter = function Newsletter(_ref) {
     var BASE_URL = _ref2.BASE_URL;
 
     _axios["default"].post("".concat(BASE_URL), {
-      name: data.name,
-      email: data.email
+      name: inputs.name,
+      email: inputs.email
     }).then(function () {
       setState(true);
     })["catch"](function () {
@@ -79,7 +82,7 @@ var Newsletter = function Newsletter(_ref) {
     type: "text",
     name: "name",
     placeholder: "insert your name",
-    value: inputs.name || "",
+    value: inputs.name,
     onChange: handleChange
   })), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_style.Label, {
     htmlFor: "email"
@@ -87,7 +90,7 @@ var Newsletter = function Newsletter(_ref) {
     type: "email",
     name: "email",
     placeholder: "insert your e-mail",
-    value: inputs.email || "",
+    value: inputs.email,
     onChange: handleChange
   })), /*#__PURE__*/_react["default"].createElement(_style.Button, {
     type: "submit",
