@@ -1,5 +1,5 @@
 {
-  "name": "react-newsletter",
+  "name": "custom-react-newsletter",
   "version": "1.0.0",
   "description": "This is a newsletter component developed agnostically",
   "main": "index.js",
