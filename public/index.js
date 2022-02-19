@@ -6,8 +6,8 @@ const App = () => (
   <Newsletter
     entity={"/api/dataentities/NL/documents"}
     title={"Newsletter"}
-    formError={"Failed to send data! :("}
-    formSucess={"Successful sending data"}
+    error={"Failed to send data! :("}
+    sucess={"Successful sending data"}
   />
 );
 
