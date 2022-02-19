@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "this is a newsletter component developed agnostically",
   "main": "index.js",
-  "repository": "https://github.com/carlosviniciusananias/vtexio-newsletter.git",
+  "repository": "https://github.com/carlosviniciusananias/vtex-newsletter",
   "author": "Carlos VInicius Ananias <carlos.oliveira69@fatec.sp.gov.br>",
   "license": "MIT",
   "scripts": {
