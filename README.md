@@ -16,8 +16,8 @@ O aplicativo submete dados para sua base de dados, permitindo que os usuários d
 
 ### Etapa 1 - Adicione custom-react-newsletter às dependências do seu projeto
 
-```npm install custom-custom-react-newsletter``` or
-```yarn add custom-custom-react-newsletter```
+```npm install custom-react-newsletter``` or
+```yarn add custom-react-newsletter```
 
 ### Etapa 2 - Importando o aplicativo e utilizando-o em seu projeto
 
